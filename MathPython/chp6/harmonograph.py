@@ -19,6 +19,7 @@ def draw():
         points.append(harmonograph(t))
         t += 0.01
     for i, s in enumerate(points):
+        p.stroke_weight(0.01)
         p.stroke(255, 0, 0)
         if i < len(points)-1:
             p.line((s[0], s[1]), (points[i+1][0], points[i+1][1]))
